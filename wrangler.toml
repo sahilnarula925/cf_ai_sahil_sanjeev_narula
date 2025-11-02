@@ -1,0 +1,19 @@
+name = "cf_ai_sahil_sanjeev_narula"
+main = "functions/index.js"
+compatibility_date = "2024-10-01"
+
+[durable_objects]
+bindings = [
+  { name = "DOCUMENT_STORE", class_name = "DocumentStore" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["DocumentStore"]
+
+[ai]
+binding = "AI"
+remote = true
+
+[assets]
+directory = "public"

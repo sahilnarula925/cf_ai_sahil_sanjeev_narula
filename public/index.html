@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Document Summarizer & Q&A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Document Summarizer</h1>
+      <p class="subtitle">Get instant summaries and ask questions about your documents</p>
+    </header>
+
+    <div class="card">
+      <h2>Your Document</h2>
+      <textarea id="doc" placeholder="Paste your document text here"></textarea>
+      <button id="summarize" class="btn btn-primary">
+        <span class="btn-text">Summarize Document</span>
+        <span class="btn-loader" style="display: none;">⏳</span>
+      </button>
+      <div id="error-message" class="error-message" style="display: none;"></div>
+    </div>
+
+    <div id="summary-section" class="card" style="display: none;">
+      <h2>Summary</h2>
+      <div id="summary" class="summary-content"></div>
+    </div>
+
+    <div id="qa-section" class="card" style="display: none;">
+      <h2>Ask Questions</h2>
+      <div class="input-group">
+        <input id="question" type="text" placeholder="Ask a question about the document" autocomplete="off">
+        <button id="ask" class="btn btn-secondary">
+          <span class="btn-text">Ask</span>
+          <span class="btn-loader" style="display: none;">Loading</span>
+        </button>
+      </div>
+      <div id="answers" class="answers-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
